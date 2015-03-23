@@ -1,11 +1,13 @@
 (set-env!
   :source-paths #{"src"}
-  :dependencies '[[me.raynes/conch  "0.8.0"]])
+  :resource-paths #{"resources"}
+  :asset-paths #{"assets"}
+  :dependencies '[[org.pegdown/pegdown  "1.5.0"]
+                  [org.clojure/tools.namespace  "0.2.10"]])
 
 (task-options!
-  pom  {:project 'thy-strap
-        :version  "0.1.0"}
-  jar  {:manifest  {"Foo"  "bar"}})
+  pom  {:project 'boot-static
+        :version  "0.1.0"})
 
 (deftask null []
   (fn [next-task]
@@ -15,6 +17,6 @@
       (next-task fileset))))
 
 (deftask build
-  "Build my project, son."
+  "Build my project"
   []
   (comp (null) (aot :all true) (pom) (jar)))
