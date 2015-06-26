@@ -2,11 +2,10 @@
   :source-paths #{"src"}
   :resource-paths #{"resources"}
   :asset-paths #{"assets"}
-  :dependencies '[[org.pegdown/pegdown  "1.5.0"]
-                  [org.clojure/tools.namespace  "0.2.10"]])
+  :dependencies '[])
 
 (task-options!
-  pom  {:project 'boot-static
+  pom  {:project 'boot-strap
         :version  "0.1.0"})
 
 (deftask null []
