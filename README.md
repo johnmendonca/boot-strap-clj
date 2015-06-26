@@ -8,6 +8,7 @@ Gradually, I want to develop this into a skeleton for a clojure web application
 - [x] Build
 - [x] Basic boot task
 - [x] Compilation and REPL access
+- [X] Cljs builds
 - [ ] Web server
 - [ ] Ring handler/middleware
 - [ ] Deployable Jar/Heroku
