@@ -2,7 +2,7 @@
   :source-paths #{"src"}
   :resource-paths #{"resources"}
   :asset-paths #{"assets"}
-  :dependencies '[[adzerk/boot-cljs "0.0-3308-0"]])
+  :dependencies '[[adzerk/boot-cljs "0.0-3308-0" :scope "test"]])
 
 (require '[adzerk.boot-cljs :refer [cljs]])
 
