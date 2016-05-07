@@ -2,7 +2,7 @@
   :source-paths #{"src"}
   :resource-paths #{"resources"}
   :asset-paths #{"assets"}
-  :dependencies '[[adzerk/boot-cljs "0.0-3308-0" :scope "test"]])
+  :dependencies '[[adzerk/boot-cljs "1.7.228-1" :scope "test"]])
 
 (require '[adzerk.boot-cljs :refer [cljs]])
 
@@ -20,4 +20,4 @@
 (deftask build
   "Build my project"
   []
-  (comp (null) (cljs :optimizations :advanced) (aot :all true) (pom) (jar)))
+  (comp (null) (cljs :optimizations :advanced) (aot :all true) (pom) (jar) (target)))
